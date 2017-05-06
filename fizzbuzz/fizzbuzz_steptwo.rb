@@ -2,7 +2,7 @@
 class FizzBuzzStepTwo < FizzBuzz
   def output(value)
     if value.to_s.include? '3'
-      'lucky'
+      LUCKY
     else
       super(value)
     end
