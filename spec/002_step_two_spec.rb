@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 require 'require_all'
 require_rel '../fizzbuzz'
-describe 'Tests for Step 1' do
-  let(:fizzbuzz) { FizzBuzz.new }
+describe 'Tests for Step 2' do
+  let(:fizzbuzz) { FizzBuzzStepTwo.new }
 
   context 'Given FizzBuzz Output' do
     it 'For integer return the number' do
@@ -11,7 +11,7 @@ describe 'Tests for Step 1' do
     end
 
     it 'For multiple of 3 return fizz' do
-      results = fizzbuzz.output(3)
+      results = fizzbuzz.output(6)
       expect(results).to eq('fizz')
     end
 
@@ -24,10 +24,15 @@ describe 'Tests for Step 1' do
       results = fizzbuzz.output(15)
       expect(results).to eq('fizzbuzz')
     end
+
+    it 'For value 3 return lucky' do
+      results = fizzbuzz.output(3)
+      expect(results).to eq('lucky')
+    end
   end
 
   context 'Given FizzBuzz Run' do
-    let(:expected_result) {  '1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17 fizz 19 buzz' }
+    let(:expected_result) {  '1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz' }
     it 'For a continugous range of integers do all' do
       results = fizzbuzz.run(1, 20)
 
