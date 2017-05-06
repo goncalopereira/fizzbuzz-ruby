@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 class FizzBuzz
   include Output
+  include OutputValues
+
   def run(first, last)
     outputs(first, last).join(' ')
   end
