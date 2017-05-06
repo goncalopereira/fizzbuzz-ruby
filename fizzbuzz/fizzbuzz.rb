@@ -9,7 +9,6 @@ class FizzBuzz
 
   def outputs(first, last)
     (first..last)
-      .to_a
       .map { |value| output(value) }
   end
 end

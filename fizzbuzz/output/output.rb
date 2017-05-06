@@ -1,8 +1,5 @@
 module Output
-  FIZZ = 'fizz'.freeze
-  BUZZ = 'buzz'.freeze
-  LUCKY = 'lucky'.freeze
-  INTEGER = 'integer'.freeze
+  include OutputValues
   def output(value)
     fizz = (value % 3).zero?
     buzz = (value % 5).zero?
